@@ -1,0 +1,41 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# nextflow runtime artifacts
+.nextflow/
+.nextflow.log*
+work/
+
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Python packaging / build artifacts
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Test / coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Type checker / linter caches
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments (if you create any outside pixi)
+.venv/
+venv/
+env/
+.env/
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,35 @@
+[workspace]
+authors = ["Maurice Barrett <mauricepatrickbarrett@gmail.com>"]
+channels = ["conda-forge", "bioconda"]
+name = "transplicon"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+# Tell pixi CUDA is available so it installs the GPU build of PyTorch (pytorch-gpu).
+# If you don't have a GPU or see resolution errors, remove this and use pytorch-cpu instead of pytorch-gpu.
+[system-requirements]
+cuda = "12.0"
+
+
+[dependencies]
+ncbi-datasets-cli = ">=18.17.1,<19"
+pyrodigal = ">=3.7.0,<4"
+nextflow = ">=25.10.4,<26"
+vsearch = ">=2.30.4,<3"
+scipy = ">=1.14"
+numpy = ">=2.0"
+seqkit = ">=2.12.0,<3"
+pandas = ">=2.0"
+pytorch-gpu = ">=2.0"
+transformers = ">=4.32,<5"
+mappy = ">=2.28"
+einops = "==0.8.1"
+triton = ">=2.1"
+cuda-toolkit = ">=12"
+transformer-engine-torch = ">=2.0,<3"
+flash-attn = ">=2.1.1,<=2.7.4"
+hf-xet = "*"
+huggingface_hub = ">=0.36.0,<0.37"
+
+[pypi-dependencies]
+hf_transfer = "*"

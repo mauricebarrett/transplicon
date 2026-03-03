@@ -1,0 +1,20 @@
+[project]
+name = "transplicon"
+version = "0.1.0"
+description = "Functional inference from amplicon data using genomic transformer models"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+    "transformers>=4.32",
+    "pandas>=2.0",
+    "scipy>=1.14",
+    "mappy>=2.28",
+    "einops>=0.8",
+]
+
+[project.scripts]
+transplicon = "transplicon.predict:cli"
+
+[tool.uv]
+# transformer-engine-torch needs torch in build env (not declared in its pyproject)
+extra-build-dependencies = { "transformer-engine-torch" = ["torch"] }
